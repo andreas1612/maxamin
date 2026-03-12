@@ -12,7 +12,7 @@ export default function CVDPage() {
                 <div className="max-w-4xl mx-auto px-6 text-center space-y-4">
                     <p className="text-xs font-mono text-emerald-500 tracking-widest">/// RESPONSIBLE_DISCLOSURE</p>
                     <h1 className="text-5xl font-black text-white">CVD Policy</h1>
-                    <p className="text-slate-400 font-mono text-sm">Coordinated Vulnerability Disclosure — n8n Flow F10</p>
+                    <p className="text-slate-400 font-mono text-sm">Coordinated Vulnerability Disclosure — Responsible Ingestion Pipeline</p>
                 </div>
             </section>
 
@@ -23,11 +23,11 @@ export default function CVDPage() {
 
                 <div className="space-y-6">
                     {[
-                        { step: "01", title: "Discovery & Documentation", body: "The auditor documents the vulnerability with full reproducibility evidence, CVSS 3.1 scoring, and SHA-256 hashed proof-of-concept artifacts." },
-                        { step: "02", title: "Client Notification (Day 0)", body: "The client is notified within 24 hours of confirmation. A triage call is scheduled to agree on remediation timeline and disclosure scope." },
-                        { step: "03", title: "Vendor Notification (Day 7)", body: "If the vulnerability relates to a third-party product, the vendor is notified (with client consent). A 90-day remediation window is granted per industry standard." },
-                        { step: "04", title: "Remediation Verification (Day 30)", body: "Maxamin re-tests the finding after the client's remediation. A 'Before/After' evidence bundle is produced and hashed." },
-                        { step: "05", title: "Public Disclosure (Mutual)", body: "Public disclosure occurs only by mutual agreement between Maxamin and the client. No unauthorized publication of client-specific findings." },
+                        { step: "01", title: "Discovery & Documentation", body: "The auditor produces a full evidence-backed disclosure package: reproduced, scored, and integrity-sealed. Nothing is logged without proof." },
+                        { step: "02", title: "Client Notification", body: "The client is the first to know. A triage call is arranged promptly to agree on remediation scope and any disclosure commitments." },
+                        { step: "03", title: "Vendor Coordination", body: "Where a third-party product is involved, coordinated notification follows with a reasonable remediation window — per established industry practice and client consent." },
+                        { step: "04", title: "Remediation Verification", body: "Maxamin re-tests the resolved finding. A certified Before/After evidence bundle confirms risk reduction — not just remediation intent." },
+                        { step: "05", title: "Public Disclosure", body: "Public disclosure is strictly by mutual agreement. No client-specific findings are published without explicit written consent." },
                     ].map((s) => (
                         <div key={s.step} className="flex gap-4 bg-slate-900/40 border border-slate-800 rounded-xl p-6 hover:border-emerald-500/30 transition-colors">
                             <div className="text-emerald-500 font-mono font-bold text-2xl shrink-0 w-10">{s.step}</div>

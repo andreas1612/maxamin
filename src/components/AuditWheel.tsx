@@ -13,10 +13,10 @@ const segments = [
         angle: 315,
         color: "#10b981",
         items: [
-            "Secure-boot & fuse flag verification",
-            "JTAG / UART interface lock status",
-            "Firmware extraction & update path integrity",
-            "Hardcoded secret & token sweep",
+            "Physical interface hardening assessment",
+            "Boot integrity & tamper-resistance checks",
+            "Firmware trust chain verification",
+            "Credential and secret exposure review",
         ],
     },
     {
@@ -27,10 +27,10 @@ const segments = [
         angle: 45,
         color: "#34d399",
         items: [
-            "Wi-Fi 2.4/5 GHz monitor & injection",
-            "BLE advertising & GATT service analysis",
-            "Zigbee / Thread 802.15.4 sniffing",
-            "Sub-GHz listen: 315/433/868/915 MHz",
+            "Multi-band wireless protocol coverage",
+            "Short-range radio service enumeration",
+            "Low-power mesh and sensor band analysis",
+            "Passive and authorised active RF capture",
         ],
     },
     {
@@ -41,10 +41,10 @@ const segments = [
         angle: 135,
         color: "#059669",
         items: [
-            "VLAN segmentation & isolation review",
-            "mDNS / SSDP / UPnP service discovery",
-            "BACnet / Modbus-TCP / ONVIF spot checks",
-            "MQTT / CoAP broker reachability",
+            "Lateral-movement barrier verification",
+            "Broadcast and discovery exposure review",
+            "Industrial and OT protocol spot checks",
+            "Broker and messaging security posture",
         ],
     },
     {
@@ -55,10 +55,10 @@ const segments = [
         angle: 225,
         color: "#6ee7b7",
         items: [
-            "IAM least-privilege verification",
-            "TLS / mTLS configuration & cert lifecycle",
-            "MQTT / CoAP topic policy audit",
-            "Log completeness & telemetry privacy",
+            "Identity and access privilege review",
+            "Transport security and certificate lifecycle",
+            "Messaging policy and topic access controls",
+            "Telemetry completeness and data privacy posture",
         ],
     },
 ];
@@ -191,7 +191,7 @@ export default function AuditWheel() {
 
                         <div className="pt-4 border-t border-slate-800">
                             <div className="flex flex-wrap gap-2">
-                                {["PASSIVE Default", "SHA-256 Hashed", "pcap Evidence"].map((tag) => (
+                                {["PASSIVE Default", "Cryptographic Evidence", "Standards Mapped"].map((tag) => (
                                     <span key={tag} className="px-3 py-1 text-xs font-mono border border-emerald-500/25 text-emerald-400 bg-emerald-500/8 rounded-full">
                                         {tag}
                                     </span>

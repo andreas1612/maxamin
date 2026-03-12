@@ -19,7 +19,7 @@ const policies = [
         icon: FileCheck,
         color: "emerald",
         title: "Chain of Custody",
-        body: "Every artifact is hashed (SHA-256) at point of capture and recorded in a manifest per run. Evidence is retained for 60 days after final delivery in The Vault (Synology WORM), after which a signed Deletion Certificate is issued to the Client. No artifact transfers outside EEA without explicit DPA clauses.",
+        body: "Every artifact is hashed (SHA-256) at point of capture and recorded in a manifest per run. Evidence is retained for 60 days after final delivery in The Vault (WORM cold vault), after which a signed Deletion Certificate is issued to the Client. No artifact transfers outside EEA without explicit DPA clauses.",
     },
 ];
 

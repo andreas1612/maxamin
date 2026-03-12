@@ -29,10 +29,10 @@ export default function TechnologyPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     {[
-                        { step: "01", label: "CAPTURE", desc: "Sentinel records pcap/pcapng artifacts in the field. Each file SHA-256 hashed at point of write." },
-                        { step: "02", label: "HANDSHAKE", desc: "Encrypted transfer via WireGuard VPN to The Vault. TLS 1.3 in transit, no third-party relay." },
-                        { step: "03", label: "PROCESSING", desc: "n8n automation pipeline ingests, indexes, and cross-references artifacts against run manifest." },
-                        { step: "04", label: "ARCHIVING", desc: "Synology WORM cold vault. Immutable 60-day retention, then signed Deletion Certificate issued." },
+                        { step: "01", label: "CAPTURE", desc: "The Sentinel captures and records artifacts in the field. Every file is integrity-protected at the exact moment of creation — not retrospectively." },
+                        { step: "02", label: "HANDSHAKE", desc: "Encrypted, direct transfer to The Vault. No third-party relay, no cloud intermediary — field to vault over a private, authenticated channel." },
+                        { step: "03", label: "PROCESSING", desc: "The Vault's orchestration engine ingests, indexes and cross-references every artifact against the run manifest, maintaining an unbroken chain of custody." },
+                        { step: "04", label: "ARCHIVING", desc: "WORM cold vault. Immutable 60-day retention. A signed Deletion Certificate is issued when the retention window closes." },
                     ].map((s, i) => (
                         <div key={s.step} className="relative">
                             <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 h-full hover:border-emerald-500/40 transition-colors">

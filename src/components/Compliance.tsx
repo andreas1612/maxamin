@@ -11,8 +11,8 @@ const standards = [
         sub: "Supervisory expectations for essential & important entities — including hotels, clinics, and logistics operators in Cyprus.",
         cards: [
             { icon: ShieldCheck, head: "Evidence Sanitization", body: "Artifact redaction pipeline strips personal data before delivery. Aligned with Cyprus Commissioner for Privacy / Data Protection (DPA) requirements." },
-            { icon: FileKey, head: "Vulnerability Disclosure", body: "Coordinated CVD flow (F10 n8n): client triage within 7 days, remediation plan within 30, public disclosure by mutual agreement." },
-            { icon: Server, head: "Chain of Custody", body: "SHA-256 per artifact, manifest.json per run, optional PGP-signed manifest.sig. Immutable WORM storage in The Vault." },
+            { icon: FileKey, head: "Vulnerability Disclosure", body: "Coordinated CVD flow via our proprietary intake pipeline: client triage within 7 days, remediation plan within 30, public disclosure by mutual agreement." },
+            { icon: Server, head: "Chain of Custody", body: "Every artifact is cryptographically sealed at the point of capture. An integrity manifest is generated per engagement, with optional PGP-signed verification. Immutable WORM storage in The Vault." },
             { icon: Globe, head: "Supplier Obligations", body: "DPA (GDPR Art. 28) and sub-processor register provided. No transfers outside EEA without SCCs / adequacy decision." },
         ]
     },
@@ -32,9 +32,9 @@ const standards = [
         title: "IoT Security & Privacy Guideline",
         sub: "Core mapping for device trust, connectivity risk, and IoT-specific security controls across the full audit stack.",
         cards: [
-            { icon: ShieldCheck, head: "Device Trust Boundaries", body: "Secure boot, JTAG/UART lock, and secret sweep mapped to ISO/IEC 27400 device trust controls." },
-            { icon: Radio, head: "Connectivity Risk", body: "Wi-Fi, BLE, Zigbee, Thread, and Sub-GHz radio posture assessed against 27400 connectivity risk guidance." },
-            { icon: FileKey, head: "Information Flow Policy", body: "Network layer review (VLAN, mDNS, SSDP) and cloud IAM audit aligned to 27400 data flow controls." },
+            { icon: ShieldCheck, head: "Device Trust Boundaries", body: "Physical interface hardening, boot integrity, and credential exposure mapped to ISO/IEC 27400 device trust controls." },
+            { icon: Radio, head: "Connectivity Risk", body: "Multi-band radio and wireless protocol security posture assessed against ISO/IEC 27400 connectivity risk guidance." },
+            { icon: FileKey, head: "Information Flow Policy", body: "Network segmentation, broadcast exposure, and cloud access audit aligned to ISO/IEC 27400 data flow controls." },
             { icon: Server, head: "27001/27002 ISMS Layer", body: "Logging, access control, cryptography, and supplier management mapped to ISO/IEC 27001 Annex A via SoA-lite template." },
         ]
     },
@@ -71,8 +71,8 @@ export default function ComplianceMatrix() {
                             key={s.id}
                             onClick={() => setActive(s.id)}
                             className={`relative px-6 py-3 rounded-xl text-sm font-mono font-bold border transition-all ${active === s.id
-                                    ? "border-emerald-500 bg-emerald-500/15 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)]"
-                                    : "border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white hover:border-slate-700"
+                                ? "border-emerald-500 bg-emerald-500/15 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)]"
+                                : "border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white hover:border-slate-700"
                                 }`}
                         >
                             {s.label}

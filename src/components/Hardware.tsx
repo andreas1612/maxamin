@@ -6,15 +6,15 @@ import Image from "next/image";
 import { Info, Zap, Lock, Wifi, Database } from "lucide-react";
 
 const sentinelHotspots = [
-    { id: "s1", x: 78, y: 22, icon: Wifi, title: "Multi-Radio Array", desc: "Alfa USB (mt76), nRF52840 BLE, CC2652P Zigbee, RTL-SDR v4 Sub-GHz, ACR122U NFC." },
-    { id: "s2", x: 22, y: 65, icon: Zap, title: "Physical Safety Switch", desc: "Keyed PASSIVE / OFF / ACTIVE rotary. Hardware interlock prevents active ops without RoE signature." },
-    { id: "s3", x: 55, y: 45, icon: Lock, title: "SHA-256 at Capture", desc: "Pi Pico supervisor triggers hashing on every pcap/pcapng write. Manifest auto-signed." },
+    { id: "s1", x: 78, y: 22, icon: Wifi, title: "Multi-Radio Array", desc: "Proprietary multi-band radio capture capability spanning Wi-Fi, BLE, Zigbee, Sub-GHz, and NFC protocols." },
+    { id: "s2", x: 22, y: 65, icon: Zap, title: "Physical Safety Switch", desc: "Hardware-enforced PASSIVE / ACTIVE mode control. Active operations are physically locked out until RoE is signed." },
+    { id: "s3", x: 55, y: 45, icon: Lock, title: "Evidence Integrity at Capture", desc: "Every artifact is cryptographically sealed at the exact moment of creation by an independent hardware supervisor. No post-hoc integrity claims." },
 ];
 
 const vaultHotspots = [
-    { id: "v1", x: 25, y: 35, icon: Database, title: "PostgreSQL Hot Storage", desc: "Structured run metadata, artifact manifests, client records, and finding indices." },
-    { id: "v2", x: 70, y: 55, icon: Zap, title: "n8n Automation Engine", desc: "47 production flows: F1 Run Intake → F10 CVD Intake. Zero cloud egress. RBAC + 2FA." },
-    { id: "v3", x: 50, y: 78, icon: Lock, title: "Synology Cold Vault", desc: "WORM-locked immutable evidence store. Deletion cert auto-issued after 60-day retention." },
+    { id: "v1", x: 25, y: 35, icon: Database, title: "Hot Evidence Storage", desc: "Structured run metadata, artifact manifests, client records, and finding indices — fully on-premise." },
+    { id: "v2", x: 70, y: 55, icon: Zap, title: "Proprietary Orchestration Engine", desc: "47 production automation flows: F1 Run Intake → F10 CVD Intake. Zero cloud egress. RBAC + 2FA." },
+    { id: "v3", x: 50, y: 78, icon: Lock, title: "WORM Cold Vault", desc: "Immutable, write-once evidence store. Deletion cert auto-issued after 60-day retention window." },
 ];
 
 function HotspotLayer({ hotspots }: { hotspots: typeof sentinelHotspots }) {
@@ -89,10 +89,10 @@ export default function HardwareShowcase() {
                             <HotspotLayer hotspots={sentinelHotspots} />
                         </div>
                         <div className="mt-6 space-y-3">
-                            <h3 className="text-2xl font-bold text-white">The Sentinel <span className="text-slate-500 font-normal text-lg">(Pi 5 Field Probe v1.0)</span></h3>
-                            <p className="text-sm text-slate-400 font-mono leading-relaxed">Tactical multi-radio field probe. Raspberry Pi 5 (8GB) with NVMe evidence store, Dockerised toolchain, and a hardware-interlocked PASSIVE/ACTIVE safety switch.</p>
+                            <h3 className="text-2xl font-bold text-white">The Sentinel <span className="text-slate-500 font-normal text-lg">(ARM64 Tactical Field Probe v1.0)</span></h3>
+                            <p className="text-sm text-slate-400 font-mono leading-relaxed">Purpose-built multi-radio field probe. ARM64 architecture with NVMe evidence store, containerised toolchain, and a hardware-interlocked PASSIVE/ACTIVE safety switch.</p>
                             <div className="flex flex-wrap gap-2 pt-2">
-                                {["ARM64", "Wi-Fi/BLE/Zigbee", "RTL-SDR", "NFC", "Wired TAP", "SHA-256 PoC"].map(t => (
+                                {["ARM64", "Wi-Fi/BLE/Zigbee", "Sub-GHz SDR", "NFC", "Wired TAP", "SHA-256 PoC"].map(t => (
                                     <span key={t} className="text-[11px] font-mono px-2.5 py-1 border border-slate-700 text-slate-400 rounded bg-slate-900">{t}</span>
                                 ))}
                             </div>
@@ -110,10 +110,10 @@ export default function HardwareShowcase() {
                             <HotspotLayer hotspots={vaultHotspots} />
                         </div>
                         <div className="mt-6 space-y-3">
-                            <h3 className="text-2xl font-bold text-white">The Vault <span className="text-slate-500 font-normal text-lg">(Fujitsu M740 Brain)</span></h3>
-                            <p className="text-sm text-slate-400 font-mono leading-relaxed">Self-hosted, multi-tenant n8n automation with PostgreSQL hot storage and Synology WORM cold vault. Zero cloud egress. Full chain-of-custody enforcement.</p>
+                            <h3 className="text-2xl font-bold text-white">The Vault <span className="text-slate-500 font-normal text-lg">(Sovereign Evidence Engine)</span></h3>
+                            <p className="text-sm text-slate-400 font-mono leading-relaxed">Self-hosted, proprietary AI orchestration engine with hot evidence storage and WORM cold vault. Zero cloud egress. Full chain-of-custody enforcement.</p>
                             <div className="flex flex-wrap gap-2 pt-2">
-                                {["n8n 47 Flows", "PostgreSQL", "Synology WORM", "RBAC + 2FA", "Deletion Cert"].map(t => (
+                                {["47 Automation Flows", "Hot Storage", "WORM Cold Vault", "RBAC + 2FA", "Deletion Cert"].map(t => (
                                     <span key={t} className="text-[11px] font-mono px-2.5 py-1 border border-slate-700 text-slate-400 rounded bg-slate-900">{t}</span>
                                 ))}
                             </div>

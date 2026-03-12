@@ -71,7 +71,7 @@ export default function SolutionsPage() {
                     <h2 className="text-3xl font-bold text-white">Hardening &amp; Validation</h2>
                 </div>
                 <p className="text-slate-400 font-mono mb-6 max-w-3xl">
-                    We implement the controls — mTLS broker hardening, VLAN segmentation, BLE GATT policies, Zigbee commissioning — and produce 'Before/After' evidence proving risk reduction. 4–6 weeks, €12k–€22k.
+                    We design and implement the security controls needed to close the gap — transport hardening, network segmentation, wireless access policies, and commissioning controls — then produce certified Before/After evidence proving the risk was actually reduced. 4–6 weeks, €12k–€22k.
                 </p>
             </section>
 
